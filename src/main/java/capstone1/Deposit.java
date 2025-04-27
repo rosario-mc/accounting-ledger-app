@@ -22,7 +22,4 @@ public class Deposit {
    public String toFileString(){
        return LocalDate.now() + " | " + LocalTime.now() +  " | Deposit | Made by: " + name + " | Deposit Amount: $" + depositAmount;
    }
-
-
-
 }
