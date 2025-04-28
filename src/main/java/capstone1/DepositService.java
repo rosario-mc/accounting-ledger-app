@@ -12,7 +12,7 @@ public class DepositService {
     public static Deposit promptForNewDeposit() {
         System.out.println("Please enter your name: ");
         String name = scanner.nextLine();
-        System.out.println("How much would you like to deposit?: ");
+        System.out.println("How Much Would You Like To Deposit?: ");
         BigDecimal depositAmount = new BigDecimal(scanner.nextLine());
         return new Deposit(name, depositAmount);
     }
@@ -20,9 +20,9 @@ public class DepositService {
     public static void addADeposit(String filename, Deposit newDeposit) {
         try (FileWriter writer = new FileWriter(filename, true)) {
             writer.write(newDeposit.toFileString() + "\n");
-            System.out.println("Deposit recorded successfully!\n");
+            System.out.println("Deposit Recorded Successfully!\n");
         } catch (IOException e) {
-            System.out.println("An error occurred while writing to the file." + e.getMessage());
+            System.out.println("An Error Occurred While Accessing File: " + e.getMessage());
         }
     }
 }

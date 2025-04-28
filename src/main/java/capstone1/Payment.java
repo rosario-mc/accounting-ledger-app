@@ -2,8 +2,8 @@ package capstone1;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 
 public class Payment {
     private String name1;
@@ -27,7 +27,9 @@ public class Payment {
     }
 
     public String toFileString(){
-        return LocalDate.now() + " | " + LocalTime.now() +  " | Payment | Paid by: " + name1 + " | Payable to: " + payableToCo+ " | Payment Amount: $" + paymentAmount;
+        DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm:ss");
+        String formattedTime = LocalTime.now().format(timeFormatter);
+        return LocalDate.now() + " | " + formattedTime +  " | Payment | Paid By: " + name1 + " | Payable To: " + payableToCo+ " | Payment Amount: $" + paymentAmount;
     }
 }
 

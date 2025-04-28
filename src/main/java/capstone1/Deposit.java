@@ -3,6 +3,7 @@ package capstone1;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 
 public class Deposit {
     private String name;
@@ -20,6 +21,8 @@ public class Deposit {
        return this.depositAmount;
    }
    public String toFileString(){
-       return LocalDate.now() + " | " + LocalTime.now() +  " | Deposit | Made by: " + name + " | Deposit Amount: $" + depositAmount;
+       DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm:ss");
+       String formattedTime = LocalTime.now().format(timeFormatter);
+       return LocalDate.now() + " | " + formattedTime +  " | Deposit | Made By: " + name + " | Deposit Amount: $" + depositAmount;
    }
 }

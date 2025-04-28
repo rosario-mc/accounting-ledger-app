@@ -11,8 +11,9 @@ public class MenuService {
         boolean run = true;
         while (run) {
             String menu = """
-                    Welcome to THE ROSARIO RESERVE!
-                    What can we do for you today?
+                    Welcome To THE ROSARIO RESERVE!
+                    What Can We Do For You Today?
+                    ================================
                     Please select a transaction from the following options:
                     D- Add A Deposit
                     P- Make A Payment (Debit)
@@ -50,8 +51,9 @@ public class MenuService {
         boolean run = true;
         while (run) {
             String menu = """
-                    LEDGER
-                    Please choose one of the following options to display:
+                          LEDGER
+                    ====================
+                    Please Choose One Of The Following Options To Display:
                     A- All Entries
                     D- Deposit Entries
                     P- Payment Entries
@@ -77,7 +79,7 @@ public class MenuService {
                     run = false;
                     break;
                 default:
-                    System.out.println("Invalid option. Please enter one of the options:\n");
+                    System.out.println("Invalid Option. Please Enter One Of The Options:\n");
             }
         }
     }
@@ -88,7 +90,8 @@ public class MenuService {
         boolean run = true;
         while (run) {
             String menu = """
-                    REPORTS
+                          REPORTS
+                    ======================
                     Please choose one of the following options to run a report:
                     1. Month To Date
                     2. Previous Month
@@ -99,25 +102,34 @@ public class MenuService {
                     0. Back To Ledger Screen
                     """;
             System.out.println(menu);
-            int reportChoice = Integer.parseInt(scanner.nextLine());
+
+            int reportChoice = Utils.safeIntegerInput(scanner);
+
             switch (reportChoice) {
                 case 1:
+                    ReportsServices.monthToDateReport("src/main/resources/transactions.csv");
                     break;
                 case 2:
+                    ReportsServices.previousMonthReport("src/main/resources/transactions.csv");
                     break;
                 case 3:
+                    ReportsServices.yearToDateReport("src/main/resources/transactions.csv");
                     break;
                 case 4:
+                    ReportsServices.previousYearReport("src/main/resources/transactions.csv");
                     break;
                 case 5:
+                    ReportsServices.searchByVendor("src/main/resources/transactions.csv");
                     break;
-                case 6:
-                    break;
+                //case 6:
+                //ReportsServices.customSearch("src/main/resources/transactions.csv");
+                //break;
                 case 0:
                     run = false;
                     break;
                 default:
-                    System.out.println("Invalid option. Please enter one of the options (0, 1, 2, 3, 4, 5):\n");
+                    System.out.println("Invalid Option. Please Enter One Of The Following Options (0, 1, 2, 3, 4, 5):\n");
+
             }
         }
     }
