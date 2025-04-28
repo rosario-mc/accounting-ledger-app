@@ -7,6 +7,7 @@ public class MenuService {
 
     //Home Screen
     public static void displayHomeScreen() {
+
         boolean run = true;
         while (run) {
             String menu = """
@@ -23,12 +24,12 @@ public class MenuService {
             switch (choice) {
                 case "D", "DEPOSIT", "ADD A DEPOSIT":
                     Deposit newDeposit = DepositService.promptForNewDeposit();
-                    DepositService.addADeposit("transactions.csv", newDeposit);
+                    DepositService.addADeposit("src/main/resources/transactions.csv", newDeposit);
                     break;
                 case "P", "PAYMENT", "DEBIT", "MAKE A PAYMENT", "MAKE A PAYMENT DEBIT", "MAKE A PAYMENT (DEBIT)",
                      "DEBIT PAYMENT", "PAYMENT DEBIT":
                     Payment newPayment = PaymentService.promptForNewPayment();
-                    PaymentService.addAPayment("transactions.csv", newPayment);
+                    PaymentService.addAPayment("src/main/resources/transactions.csv", newPayment);
                     break;
                 case "L", "LEDGER":
                     ledgerScreenOptions();
@@ -61,13 +62,13 @@ public class MenuService {
             String ledgerChoice = scanner.nextLine().toUpperCase();
             switch (ledgerChoice) {
                 case "A", "ALL ENTRIES", "ALL":
-                    TransactionServices.listAllTransactions("transactions.csv");
+                    TransactionServices.listAllTransactions("src/main/resources/transactions.csv");
                     break;
                 case "D", "DEPOSIT ENTRIES", "DEPOSIT":
-                    TransactionServices.listAllDeposits("transactions.csv");
+                    TransactionServices.listAllDeposits("src/main/resources/transactions.csv");
                     break;
                 case "P", "PAYMENT ENTRIES", "PAYMENT":
-                    TransactionServices.listAllPayments("transactions.csv");
+                    TransactionServices.listAllPayments("src/main/resources/transactions.csv");
                     break;
                 case "R", "RUN REPORTS", "REPORTS", "RUN":
                     reportsScreenOption();
@@ -81,10 +82,8 @@ public class MenuService {
         }
     }
 
-
     //Reports - display screen
     public static void reportsScreenOption() {
-
 
         boolean run = true;
         while (run) {
@@ -96,6 +95,7 @@ public class MenuService {
                     3. Year To Date
                     4. Previous Year
                     5. Search By Vendor
+                    6. Custom Search
                     0. Back To Ledger Screen
                     """;
             System.out.println(menu);
@@ -110,6 +110,8 @@ public class MenuService {
                 case 4:
                     break;
                 case 5:
+                    break;
+                case 6:
                     break;
                 case 0:
                     run = false;
