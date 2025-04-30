@@ -26,7 +26,16 @@ From the Home Screen, you can:
 
 
 ## A Cool Piece of My Code
-![Screenshot 2025-04-29 131444](https://github.com/user-attachments/assets/735fa343-4c6f-4309-ac9f-ad4bb7ba23cd)
+```java
+package capstone1;
+
+public class AccountingLedgerApp {
+
+    public static void main(String[] args) {
+        MenuService.displayHomeScreen();
+    }
+}
+```
 
 This is the first time I have been able to have my main this clean and readable. Throughout this Capstone I learned a lot of new things, and this is personally one of my favorite aspects of my code! 
 
