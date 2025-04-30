@@ -10,7 +10,7 @@ This is a simple but powerful **Command Line Interface (CLI)** tool that keeps t
 
 From the Home Screen, you can:
 
-- **Add Deposits** – Enter the date, time, description, vendor, and amount
+- **Add Deposits** – Enter the description, vendor, and amount
 - **Make Payments** – Record expenses or other debits
 - **View the Ledger** – See all transactions sorted by newest first
 - **Generate Reports** – Quickly view Month-to-Date, Year-to-Date, or even search by vendor
