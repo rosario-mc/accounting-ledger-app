@@ -22,7 +22,7 @@ From the Home Screen, you can:
 - CSV file for storage
 
 ## Application Basic Demo
-![Screen Recording 2025-04-29 142428](https://github.com/user-attachments/assets/d6df726a-3260-47ff-98da-1de68ac7dcfd)
+
 
 
 ## A Cool Piece of My Code
