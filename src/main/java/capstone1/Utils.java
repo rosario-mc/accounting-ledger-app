@@ -1,6 +1,7 @@
 package capstone1;
 
 import java.io.*;
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -67,6 +68,17 @@ public class Utils {
                 return Integer.parseInt(input);
             } catch (NumberFormatException e) {
                 System.out.println("Invalid input. Please enter a valid number:");
+            }
+        }
+    }
+
+    public static BigDecimal safeBigDecimalInput(Scanner scanner) {
+        while (true) {
+            try {
+                String input = scanner.nextLine();
+                return new BigDecimal(input);
+            } catch (NumberFormatException e) {
+                System.out.println("\nInvalid Input. Please Enter a Valid Number:");
             }
         }
     }

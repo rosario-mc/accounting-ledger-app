@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.Scanner;
 
+import static capstone1.Utils.safeBigDecimalInput;
+
 public class DepositService {
     static Scanner scanner = new Scanner(System.in);
 
@@ -13,7 +15,7 @@ public class DepositService {
         System.out.println("\nPlease enter your name: ");
         String name = scanner.nextLine();
         System.out.println("\nHow Much Would You Like To Deposit?: ");
-        BigDecimal depositAmount = new BigDecimal(scanner.nextLine());
+        BigDecimal depositAmount = safeBigDecimalInput(scanner);
         return new Deposit(name, depositAmount);
     }
 

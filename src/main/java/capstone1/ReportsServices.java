@@ -44,7 +44,7 @@ public class ReportsServices {
             String vendorName = scanner.nextLine().toUpperCase();
 
             List<String> lines = readAllLines(filename);
-            System.out.println("All " + vendorName + " Reports:");
+            System.out.println("\n===========================================================\nAll " + vendorName + " Reports:\n");
 
             for (int i = lines.size() - 1; i >= 0; i--) {
                 String line = lines.get(i);

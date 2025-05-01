@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.Scanner;
 
+import static capstone1.Utils.safeBigDecimalInput;
+
 public class PaymentService {
     static Scanner scanner = new Scanner(System.in);
 
@@ -13,7 +15,7 @@ public class PaymentService {
         System.out.println("\nPlease Enter Your Name: ");
         String name1 = scanner.nextLine();
         System.out.println("\nEnter The Amount You'd Like To Pay: ");
-        BigDecimal paymentAmount = new BigDecimal(scanner.nextLine());
+        BigDecimal paymentAmount = safeBigDecimalInput(scanner);
         System.out.println("\nEnter Vendor (Payable To): ");
         String payableToCo = scanner.nextLine();
         return new Payment(name1, paymentAmount, payableToCo);
