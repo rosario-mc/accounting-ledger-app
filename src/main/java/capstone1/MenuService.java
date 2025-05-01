@@ -59,11 +59,11 @@ public class MenuService {
                     ===========================================================
                     Please Choose One Of The Following Options To Display:
                     
-                    A- All Entries
+                    A- All Transactions
                     
-                    D- Deposit Entries
+                    D- Deposit Transactions
                     
-                    P- Payment Entries
+                    P- Payment Transactions
                     
                     R- Run Reports
                     
@@ -72,13 +72,13 @@ public class MenuService {
             System.out.println(menu);
             String ledgerChoice = scanner.nextLine().toUpperCase();
             switch (ledgerChoice) {
-                case "A", "ALL ENTRIES", "ALL":
+                case "A", "ALL TRANSACTIONS", "ALL":
                     TransactionServices.listAllTransactions("src/main/resources/transactions.csv");
                     break;
-                case "D", "DEPOSIT ENTRIES", "DEPOSIT":
+                case "D", "DEPOSIT TRANSACTIONS", "DEPOSIT":
                     TransactionServices.listAllDeposits("src/main/resources/transactions.csv");
                     break;
-                case "P", "PAYMENT ENTRIES", "PAYMENT":
+                case "P", "PAYMENT TRANSACTIONS", "PAYMENT":
                     TransactionServices.listAllPayments("src/main/resources/transactions.csv");
                     break;
                 case "R", "RUN REPORTS", "REPORTS", "RUN":
