@@ -1,8 +1,8 @@
 # Accounting Ledger CLI Application 
 
-Hi there! I'm Rosario, and this project is really special to me — it's my **very first full Java application**. I created this Accounting Ledger as part of my Capstone 1 project for the Java Development Fundamentals course, and I’m proud to say it is complete and working!
+Hi there! I'm Rosario, and this project is really special to me — it's my **very first full Java application**. I created this Accounting Ledger as part of my Capstone project for Year Up United, and I’m proud to say it is complete and working!
 
-This is a simple but powerful **Command Line Interface (CLI)** tool that keeps track of deposits and payments — perfect for personal budgeting or small business bookkeeping. It reads and writes to a `.csv` file so your data sticks with you.
+This is a simple, but powerful **Command Line Interface (CLI)** tool that keeps track of deposits and payments — perfect for personal budgeting or small business bookkeeping. It reads and writes to a `.csv` file so your data sticks with you.
 
 ---
 
@@ -25,7 +25,7 @@ From the Ledger Screen, you can view:
 From the Run Reports Screen, you can view all transactions from:
 - **Month-To-Date**
 - **Previous Month**
-- **To Date**
+- **Year To Date**
 - **Previous Year**
 - **Search By Vendor**
 - **Go Back To Ledger Screen**
