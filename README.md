@@ -1,37 +1,58 @@
 # Accounting Ledger CLI Application 
 
-Hi there! I'm Rosario, and this project is really special to me — it's my **very first full Java application**. I created this Accounting Ledger as part of my Capstone 1 project for the Java Development Fundamentals course, and I’m proud to say… it will work once I am done! This README file will be continuosly updated as I keep coding!
+Hi there! I'm Rosario, and this project is really special to me — it's my **very first full Java application**. I created this Accounting Ledger as part of my Capstone 1 project for the Java Development Fundamentals course, and I’m proud to say it is complete and working!
 
 This is a simple but powerful **Command Line Interface (CLI)** tool that keeps track of deposits and payments — perfect for personal budgeting or small business bookkeeping. It reads and writes to a `.csv` file so your data sticks with you.
 
 ---
 
-## What It Will Do
+## What It Does
 
-From the Home Screen, you will be able to:
+From the Home Screen, you can:
 
-- **Add Deposits** – Enter the date, time, description, vendor, and amount
-- **Make Payments** – Record expenses or other debits
-- **View the Ledger** – See all transactions sorted by newest first
-- **Generate Reports** – Quickly view Month-to-Date, Year-to-Date, or even search by vendor
-- **Custom Search** – (bonus feature!) Search by date range, description, vendor, or amount (**THIS IS A CHALLENGE TASK** *I* *will* *attemp* *if* *time* *allows*)
-- **Exit** – Close the program
+- **Add Deposits** 
+- **Make Payments**
+- **View the Ledger Screen Option** 
+- **Exit** 
+
+From the Ledger Screen, you can:
+- **View All Transactions** 
+- **View All Deposit Transactions**
+- **View All Payment Transactions**
+- **View Run Reports Screen Option** 
+- **Go Back To Home Page**
+
+From the Run Reports Screen, you can:
+- **View All Transactions From Month-To-Date**
+- **View All Transactions From Previous Month**
+- **View All Transactions From Year To Date**
+- **View All Transactions From Previous Year**
+- **View All Transactions From Search By Vendor**
+- **Go Back To Ledger Screen**
 
 ## Technologies Used
 - Java
 - Command Line Interface (CLI)
 - CSV file for storage
+- IntelliJ
 
-## Application Screenshots
+## Application Basic Demo
 
-> _Screenshots coming soon!_  
-Like I said earlier, I will be updating this file as I keep working along!
+![Screen Recording 2025-04-30 192119](https://github.com/user-attachments/assets/e9c765d9-d463-4a54-9af3-02aeb38b9838)
+
 
 ## A Cool Piece of My Code
->TBD
+```java
+package capstone1;
 
-## What's Next?
-I plan on completing my application by the EOD 5/1. In the meantime, I will build all the aspects of the aplication and improve them as I keep going!
+public class AccountingLedgerApp {
+
+    public static void main(String[] args) {
+        MenuService.displayHomeScreen();
+    }
+}
+```
+I learned a lot throughout this project, and I can successfully keep my main clean and concise. This is one of my favorite features of this whole project!
 
 ## Final Thoughts
 This project marks the start of my journey into tech, and I hope it inspires someone else just starting out, too. Thanks for checking out my work — and if you have feedback or suggestions, I’d love to hear them!
