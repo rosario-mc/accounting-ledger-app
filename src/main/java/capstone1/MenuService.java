@@ -11,13 +11,17 @@ public class MenuService {
         boolean run = true;
         while (run) {
             String menu = """
-                    Welcome To THE ROSARIO RESERVE!
-                    What Can We Do For You Today?
-                    ================================
+                                 Welcome To THE ROSARIO RESERVE!
+                                  What Can We Do For You Today?
+                    ===========================================================
                     Please select a transaction from the following options:
+                    
                     D- Add A Deposit
+                    
                     P- Make A Payment (Debit)
+                    
                     L- Ledger
+                    
                     E- Exit
                     """;
             System.out.println(menu);
@@ -36,7 +40,7 @@ public class MenuService {
                     ledgerScreenOptions();
                     break;
                 case "E", "EXIT":
-                    System.out.println("Thank you for trusting THE ROSARIO RESERVE!\nHave a great day!");
+                    System.out.println("===========================================================\n\nThank you for trusting THE ROSARIO RESERVE!\n\nHave a great day!");
                     run = false;
                     break;
                 default:
@@ -51,13 +55,18 @@ public class MenuService {
         boolean run = true;
         while (run) {
             String menu = """
-                          LEDGER
-                    ====================
+                                            LEDGER
+                    ===========================================================
                     Please Choose One Of The Following Options To Display:
+                    
                     A- All Entries
+                    
                     D- Deposit Entries
+                    
                     P- Payment Entries
+                    
                     R- Run Reports
+                    
                     H- Home Page
                     """;
             System.out.println(menu);
@@ -90,17 +99,23 @@ public class MenuService {
         boolean run = true;
         while (run) {
             String menu = """
-                          REPORTS
-                    ======================
+                                           REPORTS
+                    ===========================================================
                     Please choose one of the following options to run a report:
+                    
                     1. Month To Date
+                    
                     2. Previous Month
+                    
                     3. Year To Date
+                    
                     4. Previous Year
+                    
                     5. Search By Vendor
-                    6. Custom Search
+                    
                     0. Back To Ledger Screen
                     """;
+            //6. Custom Search
             System.out.println(menu);
 
             int reportChoice = Utils.safeIntegerInput(scanner);
