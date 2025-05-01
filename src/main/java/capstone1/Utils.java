@@ -9,6 +9,18 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Utils {
+    public static String promptNonEmptyString(Scanner scanner, String promptMessage) {
+        String input;
+        do {
+            System.out.println(promptMessage);
+            input = scanner.nextLine().trim();
+            if (input.isEmpty()) {
+                System.out.println("Input cannot be blank. Please try again.");
+            }
+        } while (input.isEmpty());
+        return input;
+    }
+
     public static void printFilteredTransactions(String filename, String header, String filterKeyword) {
         try {
             List<String> lines = readAllLines(filename);
@@ -70,6 +82,18 @@ public class Utils {
                 System.out.println("Invalid input. Please enter a valid number:");
             }
         }
+    }
+
+    public static BigDecimal promptPositiveBigDecimal(Scanner scanner, String promptMessage) {
+        BigDecimal amount;
+        do {
+            System.out.println(promptMessage);
+            amount = safeBigDecimalInput(scanner);
+            if (amount.compareTo(BigDecimal.ZERO) <= 0) {
+                System.out.println("Amount must be greater than zero. Please try again.");
+            }
+        } while (amount.compareTo(BigDecimal.ZERO) <= 0);
+        return amount;
     }
 
     public static BigDecimal safeBigDecimalInput(Scanner scanner) {

@@ -5,17 +5,13 @@ import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.Scanner;
 
-import static capstone1.Utils.safeBigDecimalInput;
-
 public class DepositService {
     static Scanner scanner = new Scanner(System.in);
 
     //Deposit - user input and save to csv
     public static Deposit promptForNewDeposit() {
-        System.out.println("\nPlease enter your name: ");
-        String name = scanner.nextLine();
-        System.out.println("\nHow Much Would You Like To Deposit?: ");
-        BigDecimal depositAmount = safeBigDecimalInput(scanner);
+        String name = Utils.promptNonEmptyString(scanner, "\nPlease enter your name:");
+        BigDecimal depositAmount = Utils.promptPositiveBigDecimal(scanner, "\nHow Much Would You Like To Deposit?:");
         return new Deposit(name, depositAmount);
     }
 

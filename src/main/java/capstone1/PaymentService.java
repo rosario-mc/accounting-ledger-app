@@ -5,19 +5,15 @@ import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.Scanner;
 
-import static capstone1.Utils.safeBigDecimalInput;
-
 public class PaymentService {
     static Scanner scanner = new Scanner(System.in);
 
     //Payment - user input & save to csv
     public static Payment promptForNewPayment() {
-        System.out.println("\nPlease Enter Your Name: ");
-        String name1 = scanner.nextLine();
-        System.out.println("\nEnter The Amount You'd Like To Pay: ");
-        BigDecimal paymentAmount = safeBigDecimalInput(scanner);
-        System.out.println("\nEnter Vendor (Payable To): ");
-        String payableToCo = scanner.nextLine();
+        String name1 = Utils.promptNonEmptyString(scanner, "\nPlease Enter Your Name:");
+        BigDecimal paymentAmount = Utils.promptPositiveBigDecimal(scanner, "\nEnter The Amount You'd Like To Pay:");
+        String payableToCo = Utils.promptNonEmptyString(scanner, "\nEnter Vendor (Payable To):");
+
         return new Payment(name1, paymentAmount, payableToCo);
     }
 
