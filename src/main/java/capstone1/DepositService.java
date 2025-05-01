@@ -10,9 +10,9 @@ public class DepositService {
 
     //Deposit - user input and save to csv
     public static Deposit promptForNewDeposit() {
-        System.out.println("Please enter your name: ");
+        System.out.println("\nPlease enter your name: ");
         String name = scanner.nextLine();
-        System.out.println("How Much Would You Like To Deposit?: ");
+        System.out.println("\nHow Much Would You Like To Deposit?: ");
         BigDecimal depositAmount = new BigDecimal(scanner.nextLine());
         return new Deposit(name, depositAmount);
     }
@@ -20,7 +20,7 @@ public class DepositService {
     public static void addADeposit(String filename, Deposit newDeposit) {
         try (FileWriter writer = new FileWriter(filename, true)) {
             writer.write(newDeposit.toFileString() + "\n");
-            System.out.println("Deposit Recorded Successfully!\n");
+            System.out.println("\nDeposit Recorded Successfully!\n\n\n");
         } catch (IOException e) {
             System.out.println("An Error Occurred While Accessing File: " + e.getMessage());
         }
