@@ -115,7 +115,7 @@ public class MenuService {
                     
                     0. Back To Ledger Screen
                     """;
-            //6. Custom Search
+
             System.out.println(menu);
 
             int reportChoice = Utils.safeIntegerInput(scanner);
@@ -136,9 +136,6 @@ public class MenuService {
                 case 5:
                     ReportsServices.searchByVendor("src/main/resources/transactions.csv");
                     break;
-                //case 6:
-                //ReportsServices.customSearch("src/main/resources/transactions.csv");
-                //break;
                 case 0:
                     run = false;
                     break;

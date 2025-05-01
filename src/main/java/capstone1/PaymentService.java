@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class PaymentService {
     static Scanner scanner = new Scanner(System.in);
 
-    //Payment - user input save to csv
+    //Payment - user input & save to csv
     public static Payment promptForNewPayment() {
         System.out.println("\nPlease Enter Your Name: ");
         String name1 = scanner.nextLine();

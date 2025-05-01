@@ -17,9 +17,11 @@ public class Deposit {
    public String getName(){
        return this.name;
    }
+
    public BigDecimal getDepositAmount(){
        return this.depositAmount;
    }
+
    public String toFileString(){
        DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm:ss");
        String formattedTime = LocalTime.now().format(timeFormatter);

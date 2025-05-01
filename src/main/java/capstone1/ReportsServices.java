@@ -53,7 +53,6 @@ public class ReportsServices {
                     System.out.println(line + "\n");
                 }
             }
-
         } catch (IOException e) {
             System.out.println("An Error Occurred While Accessing File: " + e.getMessage() + "\n");
         }

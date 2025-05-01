@@ -1,9 +1,6 @@
 package capstone1;
 
-import java.util.Scanner;
-
 public class TransactionServices {
-    static Scanner scanner = new Scanner(System.in);
 
     //All entries
     public static void listAllTransactions(String filename) {

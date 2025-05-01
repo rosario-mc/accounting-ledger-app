@@ -25,6 +25,7 @@ public class Utils {
             System.out.println("An Error Occurred While Accessing File: " + e.getMessage() + "\n");
         }
     }
+
     public static void printReportInDateRange(String filename, String header, LocalDate start, LocalDate end) {
         try {
             System.out.println("=======================================================\n" + header + ":\n");
@@ -47,6 +48,7 @@ public class Utils {
             System.out.println("An Error Occurred While Accessing File: " + e.getMessage() + "\n");
         }
     }
+
     public static List<String> readAllLines(String filename) throws IOException {
         List<String> lines = new ArrayList<>();
         try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {

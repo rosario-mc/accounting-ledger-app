@@ -19,9 +19,11 @@ public class Payment {
     public String getName1(){
         return this.name1;
     }
+
     public BigDecimal getPaymentAmount(){
         return this.paymentAmount;
     }
+
     public String getPayableToCo(){
         return this.payableToCo;
     }
