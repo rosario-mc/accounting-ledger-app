@@ -15,19 +15,19 @@ From the Home Screen, you can:
 - **View the Ledger Screen Option** 
 - **Exit** 
 
-From the Ledger Screen, you can:
-- **View All Transactions** 
-- **View All Deposit Transactions**
-- **View All Payment Transactions**
-- **View Run Reports Screen Option** 
+From the Ledger Screen, you can view:
+- **All Transactions** 
+- **All Deposit Transactions**
+- **All Payment Transactions**
+- **Run Reports Screen Option** 
 - **Go Back To Home Page**
 
-From the Run Reports Screen, you can:
-- **View All Transactions From Month-To-Date**
-- **View All Transactions From Previous Month**
-- **View All Transactions From Year To Date**
-- **View All Transactions From Previous Year**
-- **View All Transactions From Search By Vendor**
+From the Run Reports Screen, you can view all transactions from:
+- **Month-To-Date**
+- **Previous Month**
+- **To Date**
+- **Previous Year**
+- **Search By Vendor**
 - **Go Back To Ledger Screen**
 
 ## Technologies Used
@@ -42,6 +42,7 @@ From the Run Reports Screen, you can:
 
 
 ## A Cool Piece of My Code
+
 ```java
 package capstone1;
 
@@ -52,7 +53,12 @@ public class AccountingLedgerApp {
     }
 }
 ```
-I learned a lot throughout this project, and I can successfully keep my main clean and concise. This is one of my favorite features of this whole project!
+>*This snippet launches the application by calling a separate service to handle the menu — keeping the `main` method focused and clutter-free.*
+> 
+This is one of my favorite parts of the project because it shows how I kept the main method clean and concise. I learned a lot about organizing my code, separating responsibilities, and keeping logic modular.
+
+## Acknowledgments
+Thank you to my instructor, Maaike, for always being supportive and resourceful! A special shout out to all my peers that have helped me throughout these past couple of weeks. You guys are the best!!!
 
 ## Final Thoughts
 This project marks the start of my journey into tech, and I hope it inspires someone else just starting out, too. Thanks for checking out my work — and if you have feedback or suggestions, I’d love to hear them!
