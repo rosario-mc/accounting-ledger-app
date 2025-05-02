@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 public class Utils {
 
-    //For Numbers in Name
+    //Valid Name
     public static String promptValidName(Scanner scanner, String message) {
         String name;
 
