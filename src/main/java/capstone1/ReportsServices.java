@@ -41,17 +41,26 @@ public class ReportsServices {
     public static void searchByVendor(String filename) {
         try {
             System.out.println("\nEnter vendor name to search:\n");
-            String vendorName = scanner.nextLine().toUpperCase();
+            String vendorName = scanner.nextLine().trim().toUpperCase();
+            if (vendorName.isEmpty()) {
+                System.out.println("Vendor name cannot be blank.");
+                return;
+            }
 
             List<String> lines = readAllLines(filename);
             System.out.println("\n===========================================================\nAll " + vendorName + " Reports:\n");
 
+            boolean found = false;
             for (int i = lines.size() - 1; i >= 0; i--) {
                 String line = lines.get(i);
-
                 if (line.toUpperCase().contains(vendorName)) {
                     System.out.println(line + "\n");
+                    found = true;
                 }
+            }
+
+            if (!found) {
+                System.out.println("No records found for vendor: " + vendorName + "\n");
             }
         } catch (IOException e) {
             System.out.println("An Error Occurred While Accessing File: " + e.getMessage() + "\n");
