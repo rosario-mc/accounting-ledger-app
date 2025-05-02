@@ -40,10 +40,15 @@ public class ReportsServices {
 
     public static void searchByVendor(String filename) {
         try {
-            System.out.println("\nEnter vendor name to search:\n");
+            System.out.println("\nEnter Vendor Name:\n");
             String vendorName = scanner.nextLine().trim().toUpperCase();
+            if (!vendorName.matches("[A-Z ]+")) {
+                System.out.println("\nVendor Name Must Only Contain Letters And Spaces.");
+                return;
+            }
+
             if (vendorName.isEmpty()) {
-                System.out.println("Vendor name cannot be blank.");
+                System.out.println("\nVendor Name Cannot Be Blank.");
                 return;
             }
 
@@ -60,7 +65,7 @@ public class ReportsServices {
             }
 
             if (!found) {
-                System.out.println("No records found for vendor: " + vendorName + "\n");
+                System.out.println("\nNo Records Found For Vendor: " + vendorName + "\n");
             }
         } catch (IOException e) {
             System.out.println("An Error Occurred While Accessing File: " + e.getMessage() + "\n");

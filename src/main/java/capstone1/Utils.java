@@ -76,10 +76,11 @@ public class Utils {
     public static int safeIntegerInput(Scanner scanner) {
         while (true) {
             try {
-                String input = scanner.nextLine();
+                System.out.println("Enter your choice:\n");
+                String input = scanner.nextLine().trim();
                 return Integer.parseInt(input);
             } catch (NumberFormatException e) {
-                System.out.println("Invalid input. Please enter a valid number:");
+                System.out.println("\nInvalid Option. Please Enter One Of The Following Options (0, 1, 2, 3, 4, 5):\n");
             }
         }
     }
@@ -90,7 +91,7 @@ public class Utils {
             System.out.println(promptMessage);
             amount = safeBigDecimalInput(scanner);
             if (amount.compareTo(BigDecimal.ZERO) <= 0) {
-                System.out.println("Amount must be greater than zero. Please try again.");
+                System.out.println("Amount Must Be Greater Than Zero. Please Try Again.");
             }
         } while (amount.compareTo(BigDecimal.ZERO) <= 0);
         return amount;
