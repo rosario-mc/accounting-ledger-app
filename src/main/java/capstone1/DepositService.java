@@ -10,7 +10,7 @@ public class DepositService {
 
     //Deposit - Get User Input
     public static Deposit promptForNewDeposit() {
-        String name = Utils.promptNonEmptyString(scanner, "\nPlease enter your name:");
+        String name = Utils.promptValidName(scanner, "\nPlease enter your name:");
         BigDecimal depositAmount = Utils.promptPositiveBigDecimal(scanner, "\nHow Much Would You Like To Deposit?:");
         return new Deposit(name, depositAmount);
     }

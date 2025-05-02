@@ -48,12 +48,7 @@ public class ReportsServices {
             System.out.println("\nEnter Vendor Name:\n");
             String vendorName = scanner.nextLine().trim().toUpperCase();
             if (!vendorName.matches("[A-Z ]+")) {
-                System.out.println("\nVendor Name Must Only Contain Letters And Spaces.");
-                return;
-            }
-
-            if (vendorName.isEmpty()) {
-                System.out.println("\nVendor Name Cannot Be Blank.");
+                System.out.println("\nVendor Name Must Only Contain Letters And Spaces.\n");
                 return;
             }
 

@@ -10,7 +10,7 @@ public class PaymentService {
 
     //Payment - Get User Input
     public static Payment promptForNewPayment() {
-        String name1 = Utils.promptNonEmptyString(scanner, "\nPlease Enter Your Name:");
+        String name1 = Utils.promptValidName(scanner, "\nPlease Enter Your Name:");
         BigDecimal paymentAmount = Utils.promptPositiveBigDecimal(scanner, "\nEnter The Amount You'd Like To Pay:");
         String payableToCo = Utils.promptNonEmptyString(scanner, "\nEnter Vendor (Payable To):");
 

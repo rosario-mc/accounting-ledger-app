@@ -10,6 +10,20 @@ import java.util.Scanner;
 
 public class Utils {
 
+    //For Numbers in Name
+    public static String promptValidName(Scanner scanner, String message) {
+        String name;
+
+        while (true) {
+            name = promptNonEmptyString(scanner, message);
+            if (name.matches("[a-zA-Z ]+")) {
+                return name; // valid input
+            } else {
+                System.out.println("\nInvalid Name. Please Enter Letters Only.\n");
+            }
+        }
+    }
+
     //For Blank User Input
     public static String promptNonEmptyString(Scanner scanner, String promptMessage) {
         String input;
@@ -17,7 +31,7 @@ public class Utils {
             System.out.println(promptMessage);
             input = scanner.nextLine().trim();
             if (input.isEmpty()) {
-                System.out.println("Cannot Be Blank. Please Try Again.");
+                System.out.println("\nCannot Be Blank. Please Try Again.\n");
             }
         } while (input.isEmpty());
         return input;
