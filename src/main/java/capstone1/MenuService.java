@@ -72,16 +72,16 @@ public class MenuService {
             System.out.println(menu);
             String ledgerChoice = scanner.nextLine().toUpperCase();
             switch (ledgerChoice) {
-                case "A", "ALL TRANSACTIONS", "ALL":
+                case "A", "ALL TRANSACTIONS", "ALL", "ALL TRANSACTION":
                     TransactionServices.listAllTransactions("src/main/resources/transactions.csv");
                     break;
-                case "D", "DEPOSIT TRANSACTIONS", "DEPOSIT":
+                case "D", "DEPOSIT TRANSACTIONS", "DEPOSIT", "DEPOSIT TRANSACTION":
                     TransactionServices.listAllDeposits("src/main/resources/transactions.csv");
                     break;
-                case "P", "PAYMENT TRANSACTIONS", "PAYMENT":
+                case "P", "PAYMENT TRANSACTIONS", "PAYMENT", "PAYMENT TRANSACTION":
                     TransactionServices.listAllPayments("src/main/resources/transactions.csv");
                     break;
-                case "R", "RUN REPORTS", "REPORTS", "RUN":
+                case "R", "RUN REPORTS", "REPORTS", "RUN", "REPORT", "RUN REPORT":
                     reportsScreenOption();
                     break;
                 case "H", "HOME", "HOME PAGE":

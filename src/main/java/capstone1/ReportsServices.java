@@ -12,12 +12,14 @@ import static capstone1.Utils.readAllLines;
 public class ReportsServices {
     static Scanner scanner = new Scanner(System.in);
 
+    //Print Month To Date
     public static void monthToDateReport(String filename) {
         LocalDate today = LocalDate.now();
         LocalDate start = today.withDayOfMonth(1);
         printReportInDateRange(filename, "Month To Date", start, today);
     }
 
+    //Print Prev Month
     public static void previousMonthReport(String filename) {
         LocalDate today = LocalDate.now();
         LocalDate firstDayLastMonth = today.minusMonths(1).withDayOfMonth(1);
@@ -25,12 +27,14 @@ public class ReportsServices {
         printReportInDateRange(filename, "Previous Month", firstDayLastMonth, lastDayLastMonth);
     }
 
+    //Print Year To Date
     public static void yearToDateReport(String filename) {
         LocalDate today = LocalDate.now();
         LocalDate start = today.withDayOfYear(1);
         printReportInDateRange(filename, "Year To Date", start, today);
     }
 
+    //Print Prev Year
     public static void previousYearReport(String filename) {
         LocalDate today = LocalDate.now();
         LocalDate firstDayLastYear = LocalDate.of(today.getYear() - 1, 1, 1);
@@ -38,6 +42,7 @@ public class ReportsServices {
         printReportInDateRange(filename, "Previous Year", firstDayLastYear, lastDayLastYear);
     }
 
+    //Search By Vendor & Print
     public static void searchByVendor(String filename) {
         try {
             System.out.println("\nEnter Vendor Name:\n");

@@ -9,6 +9,8 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Utils {
+
+    //For Blank User Input
     public static String promptNonEmptyString(Scanner scanner, String promptMessage) {
         String input;
         do {
@@ -21,6 +23,7 @@ public class Utils {
         return input;
     }
 
+    //For Transaction Services (Try/Catch Method)
     public static void printFilteredTransactions(String filename, String header, String filterKeyword) {
         try {
             List<String> lines = readAllLines(filename);
@@ -39,6 +42,7 @@ public class Utils {
         }
     }
 
+    //For Report Services (Try/Catch Method)
     public static void printReportInDateRange(String filename, String header, LocalDate start, LocalDate end) {
         try {
             System.out.println("=======================================================\n" + header + ":\n");
@@ -62,6 +66,7 @@ public class Utils {
         }
     }
 
+    //To Read Transactions In Csv File
     public static List<String> readAllLines(String filename) throws IOException {
         List<String> lines = new ArrayList<>();
         try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
@@ -73,6 +78,7 @@ public class Utils {
         return lines;
     }
 
+    //For Run Reports Screen Display
     public static int safeIntegerInput(Scanner scanner) {
         while (true) {
             try {
@@ -85,6 +91,7 @@ public class Utils {
         }
     }
 
+    //For Amount Input
     public static BigDecimal promptPositiveBigDecimal(Scanner scanner, String promptMessage) {
         BigDecimal amount;
         do {
@@ -97,6 +104,7 @@ public class Utils {
         return amount;
     }
 
+    //For ^
     public static BigDecimal safeBigDecimalInput(Scanner scanner) {
         while (true) {
             try {

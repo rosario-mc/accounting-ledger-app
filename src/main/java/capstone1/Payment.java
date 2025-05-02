@@ -28,6 +28,7 @@ public class Payment {
         return this.payableToCo;
     }
 
+    //Format for csv file
     public String toFileString(){
         DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm:ss");
         String formattedTime = LocalTime.now().format(timeFormatter);

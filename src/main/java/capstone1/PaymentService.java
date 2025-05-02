@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class PaymentService {
     static Scanner scanner = new Scanner(System.in);
 
-    //Payment - user input & save to csv
+    //Payment - Get User Input
     public static Payment promptForNewPayment() {
         String name1 = Utils.promptNonEmptyString(scanner, "\nPlease Enter Your Name:");
         BigDecimal paymentAmount = Utils.promptPositiveBigDecimal(scanner, "\nEnter The Amount You'd Like To Pay:");
@@ -17,6 +17,7 @@ public class PaymentService {
         return new Payment(name1, paymentAmount, payableToCo);
     }
 
+    //Save To Csv
     public static void addAPayment(String filename, Payment newPayment) {
         try (FileWriter writer = new FileWriter(filename, true)) {
             writer.write(newPayment.toFileString() + "\n");
