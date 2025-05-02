@@ -15,7 +15,7 @@ public class Utils {
             System.out.println(promptMessage);
             input = scanner.nextLine().trim();
             if (input.isEmpty()) {
-                System.out.println("Input cannot be blank. Please try again.");
+                System.out.println("Cannot Be Blank. Please Try Again.");
             }
         } while (input.isEmpty());
         return input;
