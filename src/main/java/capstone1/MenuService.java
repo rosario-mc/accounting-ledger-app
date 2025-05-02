@@ -44,7 +44,7 @@ public class MenuService {
                     run = false;
                     break;
                 default:
-                    System.out.println("Invalid option. Please enter one of the options:\n");
+                    System.out.println("\nInvalid Option. Please Enter One Of The Options:\n");
             }
         }
     }
@@ -88,7 +88,7 @@ public class MenuService {
                     run = false;
                     break;
                 default:
-                    System.out.println("Invalid Option. Please Enter One Of The Options:\n");
+                    System.out.println("\nInvalid Option. Please Enter One Of The Options:\n");
             }
         }
     }
@@ -140,8 +140,7 @@ public class MenuService {
                     run = false;
                     break;
                 default:
-                    System.out.println("Invalid Option. Please Enter One Of The Following Options (0, 1, 2, 3, 4, 5):\n");
-
+                    System.out.println("\nInvalid Option. Please Enter One Of The Following Options (0, 1, 2, 3, 4, 5):\n");
             }
         }
     }
